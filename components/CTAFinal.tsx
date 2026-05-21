@@ -3,14 +3,9 @@ import Reveal from '@/components/Reveal'
 export default function CTAFinal() {
   return (
     <section id="cta-final" className="relative bg-blue-mid py-28 overflow-hidden text-center">
-      {/* JMAT background letters */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-lora font-medium text-white opacity-[0.06] leading-none whitespace-nowrap z-0"
-        style={{ fontSize: 'clamp(110px, 20vw, 240px)' }}
-      >
-        JMAT
-      </span>
+      <p className="absolute bottom-8 left-0 right-0 text-center font-lora italic text-white/[0.05] pointer-events-none select-none tracking-widest" style={{ fontSize: 'clamp(2rem, 6vw, 5rem)' }}>
+        conectar · acompañar · sumar
+      </p>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-5 lg:px-12">
         <Reveal>

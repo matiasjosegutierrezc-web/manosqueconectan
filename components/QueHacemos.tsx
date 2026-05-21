@@ -12,10 +12,11 @@ interface Activity {
 
 const ACTIVITIES: Activity[] = [
   {
-    freq:  'Domingos',
-    title: 'Visitas para jugar',
-    desc:  'Tardes de juego y compañía en el hogar. La actividad más regular y la que más impacto genera semana a semana.',
-    // sin src — placeholder hasta tener actividad-visitas.jpg
+    freq:   'Domingos',
+    title:  'Visitas para jugar',
+    desc:   'Tardes de juego y compañía en el hogar. La actividad más regular y la que más impacto genera semana a semana.',
+    src:    '/actividad-visitas.jpg',
+    objPos: 'center center',
   },
   {
     freq:   'Sábados',
@@ -27,7 +28,7 @@ const ACTIVITIES: Activity[] = [
   {
     freq:   'Salidas',
     title:  'Recreativas',
-    desc:   'Tamikén y otros destinos para que los chicos vivan experiencias únicas fuera del hogar.',
+    desc:   'Temaikén y otros destinos para que los chicos vivan experiencias únicas fuera del hogar.',
     src:    '/actividad-recreativa.jpg',
     objPos: 'center center',
   },

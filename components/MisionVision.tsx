@@ -18,7 +18,7 @@ export default function MisionVision() {
             Acompañamos a niños que viven en hogares. Somos el puente hacia quienes quieren ayudar.
           </h2>
           <p className="font-inter text-[16px] leading-[1.7] text-gray-dark">
-            Organizamos visitas para jugar, salidas recreativas, actividades deportivas y festejos de cumpleaños. Gestionamos donaciones materiales y coordinamos aportes para financiar actividades concretas.
+            Acompañamos a niños que se encuentran en hogares. Buscamos conectar a personas que quieren ayudar con las necesidades reales de cada lugar. Organizamos visitas para jugar, salidas recreativas, actividades deportivas y festejos de cumpleaños.
           </p>
         </Reveal>
 
@@ -35,7 +35,7 @@ export default function MisionVision() {
             <em>Ser el nexo transparente entre la intención solidaria y el impacto real.</em>
           </h2>
           <p className="font-inter text-[16px] leading-[1.7] text-white/80">
-            Soñamos con expandir la red para que cualquier persona encuentre un canal ágil y directo donde transformar sus ganas de ayudar en un cambio concreto en la vida de un chico.
+            Ser el nexo entre las personas que tienen ganas de ayudar y las organizaciones que necesitan ayuda. Soñamos con expandir nuestra red para que cualquier persona encuentre un canal transparente, ágil y directo donde transformar su intención solidaria en un impacto real.
           </p>
         </Reveal>
 
