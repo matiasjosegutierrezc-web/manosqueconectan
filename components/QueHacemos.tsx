@@ -52,7 +52,7 @@ const ACTIVITIES: Activity[] = [
 
 export default function QueHacemos() {
   return (
-    <section id="que-hacemos" className="bg-blue-dark py-24">
+    <section id="que-hacemos" className="bg-[#1F5F6B] py-24">
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
 
         {/* Header */}

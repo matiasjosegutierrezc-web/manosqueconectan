@@ -23,7 +23,7 @@ export default function MisionVision() {
         </Reveal>
 
         {/* Visión */}
-        <Reveal delay={200} className="bg-blue-mid py-16 px-12">
+        <Reveal delay={200} className="bg-[#3D5A6B] py-16 px-12">
           <span className="font-inter text-[11px] font-medium tracking-[0.15em] uppercase text-green-mint opacity-85">
             Nuestra Visión
           </span>
