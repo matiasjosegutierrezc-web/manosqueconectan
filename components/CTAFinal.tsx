@@ -2,8 +2,8 @@ import Reveal from '@/components/Reveal'
 
 export default function CTAFinal() {
   return (
-    <section id="cta-final" className="relative py-28 overflow-hidden text-center" style={{ backgroundColor: '#6EA0BE' }}>
-      <p className="absolute bottom-8 left-0 right-0 text-center font-lora italic text-white/[0.05] pointer-events-none select-none tracking-widest" style={{ fontSize: 'clamp(2rem, 6vw, 5rem)' }}>
+    <section id="cta-final" className="relative py-28 overflow-hidden text-center" style={{ backgroundColor: '#1F5F6B' }}>
+      <p className="absolute bottom-8 left-0 right-0 text-center font-lora italic text-white/[0.04] pointer-events-none select-none tracking-widest" style={{ fontSize: 'clamp(2rem, 6vw, 5rem)' }}>
         conectar · acompañar · sumar
       </p>
 
