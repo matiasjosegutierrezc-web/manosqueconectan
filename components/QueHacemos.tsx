@@ -3,10 +3,11 @@ import Reveal         from '@/components/Reveal'
 import PhotoPlaceholder from '@/components/PhotoPlaceholder'
 
 interface Activity {
-  freq:  string
-  title: string
-  desc:  string
-  src?:  string   // undefined = usar PhotoPlaceholder hasta tener la foto
+  freq:     string
+  title:    string
+  desc:     string
+  src?:     string   // undefined = usar PhotoPlaceholder hasta tener la foto
+  objPos?:  string   // object-position CSS value
 }
 
 const ACTIVITIES: Activity[] = [
@@ -17,28 +18,32 @@ const ACTIVITIES: Activity[] = [
     // sin src — placeholder hasta tener actividad-visitas.jpg
   },
   {
-    freq:  'Sábados',
-    title: 'Deportes',
-    desc:  'Rugby, Fútbol y más. El deporte como herramienta de contención y trabajo en equipo.',
-    src:   '/actividad-deportes.jpg',
+    freq:   'Sábados',
+    title:  'Deportes',
+    desc:   'Rugby, Fútbol y más. El deporte como herramienta de contención y trabajo en equipo.',
+    src:    '/actividad-deportes.jpg',
+    objPos: 'center bottom',
   },
   {
-    freq:  'Salidas',
-    title: 'Recreativas',
-    desc:  'Tamikén y otros destinos para que los chicos vivan experiencias únicas fuera del hogar.',
-    src:   '/actividad-recreativa.jpg',
+    freq:   'Salidas',
+    title:  'Recreativas',
+    desc:   'Tamikén y otros destinos para que los chicos vivan experiencias únicas fuera del hogar.',
+    src:    '/actividad-recreativa.jpg',
+    objPos: 'center center',
   },
   {
-    freq:  'Cumpleaños',
-    title: 'Festejos',
-    desc:  'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
-    src:   '/actividad-cumple.jpg',
+    freq:   'Cumpleaños',
+    title:  'Festejos',
+    desc:   'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
+    src:    '/actividad-cumple.jpg',
+    objPos: 'center top',
   },
   {
-    freq:  'Todo el año',
-    title: 'Donaciones',
-    desc:  'Coordinamos recepción y entrega de ropa, juguetes y artículos esenciales según las necesidades de cada hogar.',
-    src:   '/actividad-donaciones.jpg',
+    freq:   'Todo el año',
+    title:  'Donaciones',
+    desc:   'Coordinamos recepción y entrega de ropa, juguetes y artículos esenciales según las necesidades de cada hogar.',
+    src:    '/actividad-donaciones.jpg',
+    objPos: 'center center',
   },
 ]
 
@@ -59,17 +64,18 @@ export default function QueHacemos() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {ACTIVITIES.map(({ freq, title, desc, src }, i) => (
+          {ACTIVITIES.map(({ freq, title, desc, src, objPos }, i) => (
             <Reveal key={title} delay={(i % 3) * 100}>
               <div className="bg-blue-slate/40 border border-white/15 overflow-hidden">
 
                 {src ? (
-                  <div className="relative w-full h-48 overflow-hidden">
+                  <div className="relative w-full h-56 overflow-hidden">
                     <Image
                       src={src}
                       alt={title}
                       fill
-                      className="object-cover object-center"
+                      className="object-cover"
+                      style={{ objectPosition: objPos ?? 'center center' }}
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
