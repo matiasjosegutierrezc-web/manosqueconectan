@@ -15,7 +15,7 @@ const CARDS: Card[] = [
     title:    'Con tu tiempo',
     body:     'Visitas, deportes, salidas y festejos. Tu presencia transforma el fin de semana de un chico. Coordinamos todo, vos solo venís.',
     cta:      'Ser voluntario →',
-    href:     'https://forms.gle/q5gykQwf5fitdZot7',
+    href:     'https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform',
     external: true,
   },
   {

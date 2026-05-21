@@ -12,7 +12,7 @@ const LINKS: NavLink[] = [
   { href: '#quienes-somos',                       label: 'Quiénes somos' },
   { href: '#que-hacemos',                          label: 'Qué hacemos'   },
   { href: '#como-ayudar',                          label: 'Cómo ayudar'   },
-  { href: 'https://forms.gle/q5gykQwf5fitdZot7',  label: 'Sumate', external: true },
+  { href: 'https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform',  label: 'Sumate', external: true },
 ]
 
 function LogoSVG() {

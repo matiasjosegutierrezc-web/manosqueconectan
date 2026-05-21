@@ -1,5 +1,5 @@
-import Reveal          from '@/components/Reveal'
-import PhotoPlaceholder from '@/components/PhotoPlaceholder'
+import Image  from 'next/image'
+import Reveal from '@/components/Reveal'
 
 export default function Hero() {
   return (
@@ -50,8 +50,15 @@ export default function Hero() {
 
           {/* Right: photo */}
           <Reveal delay={200} className="w-full">
-            {/* Reemplazar con <Image src="..." alt="Voluntarios con niños en el hogar" fill className="object-cover" /> */}
-            <PhotoPlaceholder label="Foto principal" aspect="3/4" className="w-full" />
+            <div className="relative w-full h-full min-h-[500px]">
+              <Image
+                src="/hero-principal.jpg"
+                alt="Manos que Conectan — voluntarios con niños en el hogar"
+                fill
+                className="object-cover object-center"
+                priority
+              />
+            </div>
           </Reveal>
 
         </div>

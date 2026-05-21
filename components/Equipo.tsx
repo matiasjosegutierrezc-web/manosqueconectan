@@ -59,7 +59,7 @@ export default function Equipo() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 mt-7">
               <a
-                href="https://forms.gle/q5gykQwf5fitdZot7"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-7 py-3.5 min-h-[44px] bg-blue-dark border-2 border-blue-dark text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-all hover:opacity-85 hover:-translate-y-px"
