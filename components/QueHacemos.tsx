@@ -64,12 +64,13 @@ export default function QueHacemos() {
               <div className="bg-blue-slate/40 border border-white/15 overflow-hidden">
 
                 {src ? (
-                  <div className="relative w-full aspect-[4/3]">
+                  <div className="relative w-full h-48 overflow-hidden">
                     <Image
                       src={src}
                       alt={title}
                       fill
                       className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                 ) : (

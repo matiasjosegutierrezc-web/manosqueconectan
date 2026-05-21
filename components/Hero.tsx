@@ -50,13 +50,14 @@ export default function Hero() {
 
           {/* Right: photo */}
           <Reveal delay={200} className="w-full">
-            <div className="relative w-full h-full min-h-[500px]">
+            <div className="relative w-full min-h-[500px] overflow-hidden">
               <Image
                 src="/hero-principal.jpg"
                 alt="Manos que Conectan — voluntarios con niños en el hogar"
                 fill
                 className="object-cover object-center"
                 priority
+                sizes="(max-width: 768px) 100vw, 45vw"
               />
             </div>
           </Reveal>
