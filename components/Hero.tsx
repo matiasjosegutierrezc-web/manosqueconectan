@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden bg-blue-dark"
     >
       {/* Foto — solo mitad derecha */}
-      <div className="absolute right-0 top-0 bottom-0 w-[55%] hidden lg:block">
+      <div className="absolute right-0 top-0 bottom-0 w-[48%] hidden lg:block">
         <Image
           src="/hero-principal.jpg"
           alt="Manos que Conectan — voluntarios con niños en el hogar"

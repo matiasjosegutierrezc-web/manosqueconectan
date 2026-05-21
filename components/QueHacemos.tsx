@@ -17,7 +17,7 @@ const ACTIVITIES: Activity[] = [
     title:  'Visitas para jugar',
     desc:   'Tardes de juego y compañía en el hogar. La actividad más regular y la que más impacto genera semana a semana.',
     src:    '/actividad-visitas.jpg',
-    objPos: 'center 70%',
+    objPos: 'center 85%',
   },
   {
     freq:   'Sábados',
