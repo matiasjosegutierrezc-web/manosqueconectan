@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'blue-mid':   '#6B9AB8',
-        'blue-dark':  '#2A6478',
-        'blue-slate': '#4A7A8A',
+        'blue-mid':   '#6EA0BE',
+        'blue-dark':  '#4A7A96',
+        'blue-slate': '#3D6B82',
         'green-mint': '#52BFA0',
         'green-cta':  '#4DB896',
         'gray-dark':  '#4A5568',

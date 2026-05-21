@@ -19,7 +19,7 @@ export default function QuoteBanner() {
           <div className="md:hidden h-px bg-white/20 w-full" aria-hidden="true" />
 
           <Reveal delay={200} className="md:pl-16">
-            <p className="font-inter text-[16px] leading-[1.72] text-white/75">
+            <p className="font-inter text-[16px] leading-[1.72] text-white/90">
               Conectamos voluntad con impacto real. Cada persona puede sumar desde sus posibilidades: con tiempo, con cosas o con aportes económicos.
             </p>
           </Reveal>

@@ -1,17 +1,4 @@
-function LogoSVG() {
-  return (
-    <svg width="32" height="22" viewBox="0 0 40 28" fill="none" aria-hidden="true">
-      {/* Arco izquierdo */}
-      <path d="M4 22 Q8 8 16 6"  stroke="currentColor" strokeWidth="2"   strokeLinecap="round" fill="none" />
-      <path d="M7 24 Q11 10 18 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
-      {/* Punto central */}
-      <circle cx="20" cy="4" r="2" fill="currentColor" />
-      {/* Arco derecho */}
-      <path d="M36 22 Q32 8 24 6"  stroke="currentColor" strokeWidth="2"   strokeLinecap="round" fill="none" />
-      <path d="M33 24 Q29 10 22 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
-    </svg>
-  )
-}
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -24,7 +11,7 @@ export default function Footer() {
             href="#hero"
             className="inline-flex items-center justify-center md:justify-start gap-2.5 text-white font-lora text-[16px] font-medium"
           >
-            <LogoSVG />
+            <Image src="/logo.png" alt="Manos que Conectan" width={32} height={32} className="object-contain" />
             Manos que conectan
           </a>
 
