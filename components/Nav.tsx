@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface NavLink {
@@ -52,9 +51,17 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12 h-16 lg:h-[72px] flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2.5 text-white font-lora text-[17px] font-medium">
-          <Image src="/logo.png" alt="Manos que Conectan" width={36} height={36} className="object-contain" />
-          Manos que conectan
+        <a href="#hero" className="flex items-center gap-3">
+          <svg width="44" height="32" viewBox="0 0 44 32" fill="none" aria-hidden="true">
+            <path d="M2 28 Q6 8 18 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+            <path d="M7 29 Q10 12 18 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
+            <circle cx="22" cy="3" r="2.2" fill="white"/>
+            <path d="M42 28 Q38 8 26 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+            <path d="M37 29 Q34 12 26 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
+          </svg>
+          <span className="font-lora text-white text-lg">
+            Manos que <strong className="font-semibold">conectan</strong>
+          </span>
         </a>
 
         {/* Desktop links */}
