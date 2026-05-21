@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface NavLink {
@@ -9,24 +10,15 @@ interface NavLink {
 }
 
 const LINKS: NavLink[] = [
-  { href: '#quienes-somos',                       label: 'Quiénes somos' },
-  { href: '#que-hacemos',                          label: 'Qué hacemos'   },
-  { href: '#como-ayudar',                          label: 'Cómo ayudar'   },
+  { href: '#quienes-somos',                                                                                              label: 'Quiénes somos' },
+  { href: '#que-hacemos',                                                                                                label: 'Qué hacemos'   },
+  { href: '#como-ayudar',                                                                                                label: 'Cómo ayudar'   },
   { href: 'https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform',  label: 'Sumate', external: true },
 ]
 
-
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeId, setActiveId] = useState('')
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'))
@@ -46,22 +38,12 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-blue-dark/95 backdrop-blur-md' : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 py-4 px-6 lg:px-12"
+      style={{ backgroundColor: '#6EA0BE' }}
     >
-      <div className="max-w-[1200px] mx-auto px-5 lg:px-12 h-16 lg:h-[72px] flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-3">
-          <svg width="44" height="32" viewBox="0 0 44 32" fill="none" aria-hidden="true">
-            <path d="M2 28 Q6 8 18 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-            <path d="M7 29 Q10 12 18 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
-            <circle cx="22" cy="3" r="2.2" fill="white"/>
-            <path d="M42 28 Q38 8 26 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-            <path d="M37 29 Q34 12 26 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
-          </svg>
-          <span className="font-lora text-white text-lg">
-            Manos que <strong className="font-semibold">conectan</strong>
-          </span>
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+        <a href="#hero">
+          <Image src="/logo.png" alt="Manos que Conectan" width={48} height={48} className="object-contain" />
         </a>
 
         {/* Desktop links */}
@@ -100,7 +82,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-menu" className="md:hidden bg-blue-dark px-5 py-4 flex flex-col">
+        <div id="mobile-menu" className="md:hidden px-5 py-4 flex flex-col" style={{ backgroundColor: '#6EA0BE' }}>
           {LINKS.map(({ href, label, external }) => (
             <a
               key={href}
@@ -108,7 +90,7 @@ export default function Nav() {
               target={external ? '_blank' : undefined}
               rel={external ? 'noopener noreferrer' : undefined}
               onClick={closeMenu}
-              className="text-white/82 text-base font-medium py-3 border-b border-white/10 last:border-0 hover:text-white transition-colors"
+              className="text-white/90 text-base font-medium py-3 border-b border-white/20 last:border-0 hover:text-white transition-colors"
             >
               {label}
             </a>

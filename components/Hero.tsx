@@ -5,7 +5,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-blue-dark"
+      className="relative min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden"
+      style={{ backgroundColor: '#6EA0BE' }}
     >
       {/* Foto mobile — arriba */}
       <div className="relative w-full h-[45vh] lg:hidden">
@@ -17,7 +18,7 @@ export default function Hero() {
           priority
           sizes="100vw"
         />
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-blue-dark" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#6EA0BE]" />
       </div>
 
       {/* Foto desktop — derecha */}
@@ -30,11 +31,11 @@ export default function Hero() {
           priority
           sizes="38vw"
         />
-        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-blue-dark to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#6EA0BE] to-transparent" />
       </div>
 
       {/* Gradiente inferior desktop */}
-      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-blue-dark z-20 pointer-events-none hidden lg:block" />
+      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-[#6EA0BE] z-20 pointer-events-none hidden lg:block" />
 
       {/* Texto */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-12 lg:py-32 w-full">
