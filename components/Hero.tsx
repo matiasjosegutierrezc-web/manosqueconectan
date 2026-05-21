@@ -11,7 +11,8 @@ export default function Hero() {
         src="/hero-principal.jpg"
         alt="Manos que Conectan — voluntarios con niños en el hogar"
         fill
-        className="object-cover object-center"
+        className="object-cover"
+        style={{ objectPosition: 'center center' }}
         priority
         sizes="100vw"
       />

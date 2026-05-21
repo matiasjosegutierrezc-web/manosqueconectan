@@ -1,3 +1,4 @@
+import Image           from 'next/image'
 import Reveal          from '@/components/Reveal'
 import PhotoPlaceholder from '@/components/PhotoPlaceholder'
 import StatCounter      from '@/components/StatCounter'
@@ -17,9 +18,15 @@ export default function Equipo() {
                 aspect="16/9"
                 className="col-span-2"
               />
-              {/* Reemplazar con <Image src="..." alt="Actividad grupal" fill className="object-cover" /> */}
-              <PhotoPlaceholder label="Foto" aspect="1/1" />
-              {/* Reemplazar con <Image src="..." alt="Actividad grupal" fill className="object-cover" /> */}
+              <div className="relative w-full min-h-[180px] overflow-hidden">
+                <Image
+                  src="/foto-equipo-chica.jpg"
+                  alt="Equipo Manos que Conectan"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
               <PhotoPlaceholder label="Foto" aspect="1/1" />
             </div>
           </Reveal>
