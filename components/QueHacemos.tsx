@@ -38,7 +38,7 @@ const ACTIVITIES: Activity[] = [
     title:  'Festejos',
     desc:   'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
     src:    '/actividad-cumple.jpg',
-    objPos: 'center center',
+    objPos: 'center 85%',
     imgH:   'h-64',
   },
   {
