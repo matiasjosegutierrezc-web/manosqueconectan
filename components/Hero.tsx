@@ -6,7 +6,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden bg-blue-mid pt-[120px] pb-24"
-      style={{ background: 'linear-gradient(175deg, #5B8FA8 0%, #1F5F6B 100%)' }}
+      style={{ background: 'linear-gradient(175deg, #6B9AB8 0%, #2A6478 100%)' }}
     >
       {/* MQC background letters */}
       <span
@@ -40,7 +40,7 @@ export default function Hero() {
                 Cómo ayudar
               </a>
               <a
-                href="#mision"
+                href="#quienes-somos"
                 className="inline-flex items-center justify-center px-7 py-3.5 min-h-[44px] bg-blue-dark border-2 border-blue-dark text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-all hover:opacity-85 hover:-translate-y-px"
               >
                 Conocernos

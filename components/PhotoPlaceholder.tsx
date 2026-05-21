@@ -1,7 +1,8 @@
 interface PhotoPlaceholderProps {
-  label: string
-  aspect?: '4/3' | '3/4' | '1/1' | '16/9'
+  label:    string
+  aspect?:  '4/3' | '3/4' | '1/1' | '16/9'
   className?: string
+  bgClass?: string
 }
 
 const aspectMap: Record<string, string> = {
@@ -13,12 +14,13 @@ const aspectMap: Record<string, string> = {
 
 export default function PhotoPlaceholder({
   label,
-  aspect = '4/3',
+  aspect   = '4/3',
   className = '',
+  bgClass   = 'bg-blue-slate/20',
 }: PhotoPlaceholderProps) {
   return (
     <div
-      className={`${aspectMap[aspect]} border border-dashed border-gray-mid/50 bg-blue-slate/20 flex flex-col items-center justify-center gap-3 text-gray-mid ${className}`}
+      className={`${aspectMap[aspect]} border border-dashed border-gray-mid/50 ${bgClass} flex flex-col items-center justify-center gap-3 text-gray-mid ${className}`}
     >
       {/* Reemplazar con <Image src="..." alt="..." fill className="object-cover" /> */}
       <svg width="40" height="40" viewBox="0 0 44 44" fill="none" aria-hidden="true">

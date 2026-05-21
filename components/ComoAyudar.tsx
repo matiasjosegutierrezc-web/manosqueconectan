@@ -1,34 +1,38 @@
 import Reveal from '@/components/Reveal'
 
 interface Card {
-  num: string
-  title: string
-  body: string
-  cta: string
-  href: string
+  num:      string
+  title:    string
+  body:     string
+  cta:      string
+  href:     string
+  external: boolean
 }
 
 const CARDS: Card[] = [
   {
-    num:   '01',
-    title: 'Con tu tiempo',
-    body:  'Visitas, deportes, salidas y festejos. Tu presencia transforma el fin de semana de un chico. Coordinamos todo, vos solo venís.',
-    cta:   'Ser voluntario →',
-    href:  '#equipo',
+    num:      '01',
+    title:    'Con tu tiempo',
+    body:     'Visitas, deportes, salidas y festejos. Tu presencia transforma el fin de semana de un chico. Coordinamos todo, vos solo venís.',
+    cta:      'Ser voluntario →',
+    href:     'https://forms.gle/q5gykQwf5fitdZot7',
+    external: true,
   },
   {
-    num:   '02',
-    title: 'Con cosas',
-    body:  'Ropa, juguetes, artículos de higiene, útiles y regalos. Gestionamos la entrega según las necesidades reales de cada hogar.',
-    cta:   'Donar cosas →',
-    href:  '#equipo',
+    num:      '02',
+    title:    'Con cosas',
+    body:     'Ropa, juguetes, artículos de higiene, útiles y regalos. Gestionamos la entrega según las necesidades reales de cada hogar.',
+    cta:      'Donar cosas →',
+    href:     'https://wa.me/?text=Hola%2C%20quiero%20donar%20cosas%20a%20Manos%20que%20Conectan',
+    external: true,
   },
   {
-    num:   '03',
-    title: 'Con un aporte',
-    body:  'Micros, entradas, meriendas y campañas específicas. Cada peso tiene destino concreto y transparente.',
-    cta:   'Contribuir →',
-    href:  '#equipo',
+    num:      '03',
+    title:    'Con un aporte',
+    body:     'Micros, entradas, meriendas y campañas específicas. Cada peso tiene destino concreto y transparente.',
+    cta:      'Contribuir →',
+    href:     'https://wa.me/?text=Hola%2C%20quiero%20hacer%20un%20aporte%20a%20Manos%20que%20Conectan',
+    external: true,
   },
 ]
 
@@ -57,9 +61,9 @@ export default function ComoAyudar() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {CARDS.map(({ num, title, body, cta, href }, i) => (
+          {CARDS.map(({ num, title, body, cta, href, external }, i) => (
             <Reveal key={num} delay={i * 100}>
-              <div className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white group transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(31,95,107,0.09)]">
+              <div className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(42,100,120,0.09)]">
                 {/* Decorative number */}
                 <span
                   aria-hidden="true"
@@ -82,6 +86,8 @@ export default function ComoAyudar() {
                 </p>
                 <a
                   href={href}
+                  target={external ? '_blank' : undefined}
+                  rel={external ? 'noopener noreferrer' : undefined}
                   className="relative font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 transition-colors hover:text-green-cta hover:border-green-cta"
                 >
                   {cta}

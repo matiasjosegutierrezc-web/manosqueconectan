@@ -1,16 +1,14 @@
 function LogoSVG() {
   return (
-    <svg width="28" height="22" viewBox="0 0 34 26" fill="none" aria-hidden="true">
-      <path
-        d="M2 24 C2 12 8.5 4 17 4 C25.5 4 32 12 32 24"
-        stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"
-      />
-      <circle cx="2"  cy="24" r="2.5" fill="currentColor" />
-      <circle cx="32" cy="24" r="2.5" fill="currentColor" />
-      <path
-        d="M8 24 C8 15.5 12 9.5 17 9.5 C22 9.5 26 15.5 26 24"
-        stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.55"
-      />
+    <svg width="32" height="22" viewBox="0 0 40 28" fill="none" aria-hidden="true">
+      {/* Arco izquierdo */}
+      <path d="M4 22 Q8 8 16 6"  stroke="currentColor" strokeWidth="2"   strokeLinecap="round" fill="none" />
+      <path d="M7 24 Q11 10 18 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
+      {/* Punto central */}
+      <circle cx="20" cy="4" r="2" fill="currentColor" />
+      {/* Arco derecho */}
+      <path d="M36 22 Q32 8 24 6"  stroke="currentColor" strokeWidth="2"   strokeLinecap="round" fill="none" />
+      <path d="M33 24 Q29 10 22 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
     </svg>
   )
 }
@@ -40,12 +38,12 @@ export default function Footer() {
             >
               @manosqueconectan.ar
             </a>
-            <nav aria-label="Links del footer" className="flex flex-wrap justify-center gap-1.5 font-inter text-[13px] text-white/60">
-              <a href="#mision"      className="text-white/65 hover:text-white transition-colors">Quiénes somos</a>
-              <span className="opacity-35" aria-hidden="true">·</span>
-              <a href="#que-hacemos" className="text-white/65 hover:text-white transition-colors">Qué hacemos</a>
-              <span className="opacity-35" aria-hidden="true">·</span>
-              <a href="#como-ayudar" className="text-white/65 hover:text-white transition-colors">Cómo ayudar</a>
+            <nav aria-label="Links del footer" className="flex flex-wrap justify-center gap-1.5 font-inter text-[13px]">
+              <a href="#quienes-somos" className="text-white/65 hover:text-white transition-colors">Quiénes somos</a>
+              <span className="opacity-35 text-white" aria-hidden="true">·</span>
+              <a href="#que-hacemos"   className="text-white/65 hover:text-white transition-colors">Qué hacemos</a>
+              <span className="opacity-35 text-white" aria-hidden="true">·</span>
+              <a href="#como-ayudar"   className="text-white/65 hover:text-white transition-colors">Cómo ayudar</a>
             </nav>
           </div>
 

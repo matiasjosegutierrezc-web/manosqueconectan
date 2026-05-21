@@ -25,7 +25,7 @@ export default function QueHacemos() {
           <h2 className="font-lora font-normal leading-[1.15] mb-4" style={{ fontSize: 'clamp(30px, 4.5vw, 48px)' }}>
             Lo que<br /><em>hacemos</em>
           </h2>
-          <p className="font-inter text-[16px] text-white/68 max-w-[520px] mx-auto leading-[1.65]">
+          <p className="font-inter text-[16px] text-white/70 max-w-[520px] mx-auto leading-[1.65]">
             Llenamos los fines de semana de los chicos de actividades, compañía y contención.
           </p>
         </Reveal>
@@ -34,9 +34,9 @@ export default function QueHacemos() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {ACTIVITIES.map(({ freq, title, desc }, i) => (
             <Reveal key={title} delay={(i % 3) * 100}>
-              <div className="bg-blue-slate/40 border border-white/[0.09] overflow-hidden">
+              <div className="bg-blue-slate/40 border border-white/15 overflow-hidden">
                 {/* Reemplazar con <Image src="..." alt={title} fill className="object-cover" /> */}
-                <PhotoPlaceholder label="Foto actividad" aspect="4/3" />
+                <PhotoPlaceholder label="Foto actividad" aspect="4/3" bgClass="bg-white/10" />
                 <div className="p-5 pb-6">
                   <span className="block font-inter text-[10px] font-semibold tracking-[0.15em] uppercase text-green-mint mb-2">
                     {freq}
@@ -44,7 +44,7 @@ export default function QueHacemos() {
                   <h3 className="font-lora font-medium text-[19px] text-white mb-2.5">
                     {title}
                   </h3>
-                  <p className="font-inter text-[14px] leading-[1.62] text-white/62">
+                  <p className="font-inter text-[14px] leading-[1.62] text-white/75">
                     {desc}
                   </p>
                 </div>
