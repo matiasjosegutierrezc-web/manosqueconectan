@@ -7,20 +7,23 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden bg-blue-dark"
     >
-      <Image
-        src="/hero-principal.jpg"
-        alt="Manos que Conectan — voluntarios con niños en el hogar"
-        fill
-        className="object-cover object-center"
-        priority
-        sizes="100vw"
-      />
+      {/* Foto — solo mitad derecha */}
+      <div className="absolute right-0 top-0 bottom-0 w-[55%] hidden lg:block">
+        <Image
+          src="/hero-principal.jpg"
+          alt="Manos que Conectan — voluntarios con niños en el hogar"
+          fill
+          className="object-cover object-[center_40%]"
+          priority
+          sizes="55vw"
+        />
+        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-blue-dark to-transparent" />
+      </div>
 
-      <div
-        className="absolute inset-0"
-        style={{ background: 'linear-gradient(to right, #2A6478 0%, #2A6478 35%, rgba(42,100,120,0.85) 50%, rgba(42,100,120,0.3) 70%, transparent 100%)' }}
-      />
+      {/* Gradiente inferior: transición al quote banner */}
+      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-blue-dark z-20 pointer-events-none" />
 
+      {/* Texto */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-32 w-full">
         <div className="max-w-lg">
           <Reveal>

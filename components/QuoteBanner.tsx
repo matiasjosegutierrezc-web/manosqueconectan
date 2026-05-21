@@ -2,7 +2,7 @@ import Reveal from '@/components/Reveal'
 
 export default function QuoteBanner() {
   return (
-    <section id="quote" className="bg-blue-dark py-20">
+    <section id="quote" className="bg-blue-dark pt-0 pb-20">
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] gap-9 md:gap-0 items-center">
 
