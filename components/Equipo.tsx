@@ -27,7 +27,15 @@ export default function Equipo() {
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
-              <PhotoPlaceholder label="Foto" aspect="1/1" />
+              <div className="relative w-full min-h-[180px] overflow-hidden">
+                <Image
+                  src="/foto-equipo-chica2.jpg"
+                  alt="Equipo en actividad"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </div>
             </div>
           </Reveal>
 
