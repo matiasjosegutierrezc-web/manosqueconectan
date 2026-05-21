@@ -16,17 +16,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-center text-center md:text-left">
 
           {/* Logo */}
-          <a href="#hero" className="inline-flex items-center justify-center md:justify-start gap-3">
-            <svg width="44" height="32" viewBox="0 0 44 32" fill="none" aria-hidden="true">
-              <path d="M2 28 Q6 8 18 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-              <path d="M7 29 Q10 12 18 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
-              <circle cx="22" cy="3" r="2.2" fill="white"/>
-              <path d="M42 28 Q38 8 26 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-              <path d="M37 29 Q34 12 26 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.85"/>
-            </svg>
-            <span className="font-lora text-white text-lg">
-              Manos que <strong className="font-semibold">conectan</strong>
-            </span>
+          <a href="#hero" className="inline-flex justify-center md:justify-start">
+            <Image src="/logo.png" alt="Manos que Conectan" width={120} height={44} className="object-contain object-left" />
           </a>
 
           {/* Center */}
