@@ -2,12 +2,12 @@ import Reveal from '@/components/Reveal'
 
 export default function QuoteBanner() {
   return (
-    <section id="quote" className="pt-0 pb-20" style={{ backgroundColor: '#5589A3' }}>
+    <section id="quote" className="pt-0 pb-20" style={{ backgroundColor: '#5C8FAA' }}>
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] gap-9 md:gap-0 items-center">
 
           <Reveal className="md:pr-16">
-            <blockquote className="font-lora italic text-white leading-[1.35]" style={{ fontSize: 'clamp(24px, 3.2vw, 36px)' }}>
+            <blockquote className="font-lora italic text-white/95 leading-[1.35]" style={{ fontSize: 'clamp(24px, 3.2vw, 36px)' }}>
               &ldquo;Hay tantas formas de{' '}
               <span className="text-green-mint">colaborar</span>
               {' '}como personas.&rdquo;
@@ -19,7 +19,7 @@ export default function QuoteBanner() {
           <div className="md:hidden h-px bg-white/20 w-full" aria-hidden="true" />
 
           <Reveal delay={200} className="md:pl-16">
-            <p className="font-inter text-[16px] leading-[1.72] text-white/90">
+            <p className="font-inter text-[16px] leading-[1.72] text-white/80">
               Conectamos voluntad con impacto real. Cada persona puede sumar desde sus posibilidades: con tiempo, con cosas o con aportes económicos.
             </p>
           </Reveal>
