@@ -3,11 +3,12 @@ import Reveal         from '@/components/Reveal'
 import PhotoPlaceholder from '@/components/PhotoPlaceholder'
 
 interface Activity {
-  freq:     string
-  title:    string
-  desc:     string
-  src?:     string   // undefined = usar PhotoPlaceholder hasta tener la foto
-  objPos?:  string   // object-position CSS value
+  freq:    string
+  title:   string
+  desc:    string
+  src?:    string   // undefined = usar PhotoPlaceholder hasta tener la foto
+  objPos?: string   // object-position CSS value
+  imgH?:   string   // Tailwind height class for image container (default h-56)
 }
 
 const ACTIVITIES: Activity[] = [
@@ -37,7 +38,8 @@ const ACTIVITIES: Activity[] = [
     title:  'Festejos',
     desc:   'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
     src:    '/actividad-cumple.jpg',
-    objPos: 'center top',
+    objPos: 'center center',
+    imgH:   'h-64',
   },
   {
     freq:   'Todo el año',
@@ -65,12 +67,12 @@ export default function QueHacemos() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {ACTIVITIES.map(({ freq, title, desc, src, objPos }, i) => (
+          {ACTIVITIES.map(({ freq, title, desc, src, objPos, imgH }, i) => (
             <Reveal key={title} delay={(i % 3) * 100}>
               <div className="bg-blue-slate/40 border border-white/15 overflow-hidden">
 
                 {src ? (
-                  <div className="relative w-full h-56 overflow-hidden">
+                  <div className={`relative w-full ${imgH ?? 'h-56'} overflow-hidden`}>
                     <Image
                       src={src}
                       alt={title}
