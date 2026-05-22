@@ -2,7 +2,7 @@ import Reveal from '@/components/Reveal'
 
 export default function MisionVision() {
   return (
-    <section id="quienes-somos" className="bg-off-white" style={{ scrollMarginTop: '80px' }}>
+    <section id="quienes-somos" className="bg-off-white pt-24" style={{ scrollMarginTop: '100px' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
 
         {/* Misión */}
