@@ -38,12 +38,12 @@ export default function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 py-4 px-6 lg:px-12"
+      className="fixed top-0 left-0 right-0 z-50 py-2 lg:py-4 px-6 lg:px-12"
       style={{ backgroundColor: '#6EA0BE' }}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={120} height={44} className="object-contain object-left" />
+          <Image src="/logo.png" alt="Manos que Conectan" width={120} height={44} className="object-contain object-left w-[90px] lg:w-[120px] h-auto" />
         </a>
 
         {/* Desktop links */}
@@ -54,7 +54,7 @@ export default function Nav() {
                 href={href}
                 target={external ? '_blank' : undefined}
                 rel={external ? 'noopener noreferrer' : undefined}
-                className={`text-[13px] font-medium tracking-[0.04em] pb-0.5 border-b transition-colors duration-200 ${
+                className={`text-sm lg:text-base font-medium tracking-[0.04em] pb-0.5 border-b transition-colors duration-200 ${
                   !external && activeId === href.slice(1)
                     ? 'text-white border-green-mint'
                     : 'text-white/80 border-transparent hover:text-white hover:border-green-mint'
