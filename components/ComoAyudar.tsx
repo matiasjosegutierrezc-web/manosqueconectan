@@ -136,8 +136,8 @@ const CARDS: Card[] = [
     title:    'Con donaciones materiales',
     body:     'Ropa, juguetes, artículos de higiene, útiles y regalos. Gestionamos la entrega según las necesidades de cada hogar.',
     cta:      'Donar cosas →',
-    href:     'https://wa.me/?text=Hola%2C%20quiero%20donar%20cosas%20a%20Manos%20que%20Conectan',
-    external: true,
+    href:     'mailto:manosqueconectan.ar@gmail.com?subject=Donación%20de%20materiales&body=Hola%2C%20me%20gustaría%20comentarles%20qué%20puedo%20donar.',
+    external: false,
   },
   {
     num:      '03',
