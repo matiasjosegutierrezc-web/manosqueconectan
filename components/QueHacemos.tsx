@@ -1,6 +1,5 @@
-import Image         from 'next/image'
-import Reveal         from '@/components/Reveal'
-import PhotoPlaceholder from '@/components/PhotoPlaceholder'
+import Image  from 'next/image'
+import Reveal from '@/components/Reveal'
 
 interface Activity {
   freq:    string
@@ -88,8 +87,7 @@ export default function QueHacemos() {
                     />
                   </div>
                 ) : (
-                  /* Reemplazar con <Image src="/actividad-visitas.jpg" alt={title} fill className="object-cover object-center" /> */
-                  <PhotoPlaceholder label="Foto actividad" aspect="4/3" bgClass="bg-white/10" />
+                  <div className="w-full h-56 bg-white/10" />
                 )}
 
                 <div className="p-5 pb-6">
