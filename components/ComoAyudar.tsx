@@ -159,7 +159,7 @@ export default function ComoAyudar() {
   }, [])
 
   return (
-    <section id="como-ayudar" className="bg-off-white py-24 border-t border-gray-mid/[0.12]" style={{ scrollMarginTop: '70px' }}>
+    <section id="como-ayudar" className="bg-off-white py-24 border-t border-gray-mid/[0.12]" style={{ scrollMarginTop: '80px' }}>
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
 
         {/* Header */}
@@ -181,10 +181,10 @@ export default function ComoAyudar() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
           {CARDS.map(({ num, title, body, cta, href, external, modal }, i) => (
-            <Reveal key={num} delay={i * 100}>
-              <div className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(42,100,120,0.09)]">
+            <Reveal key={num} delay={i * 100} className="h-full">
+              <div className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(42,100,120,0.09)] h-full flex flex-col">
                 <span
                   aria-hidden="true"
                   className="pointer-events-none select-none absolute -top-3 right-4 font-lora font-medium text-blue-mid opacity-[0.10] leading-none"
@@ -196,14 +196,14 @@ export default function ComoAyudar() {
                 <h3 className="relative font-lora font-medium text-[22px] text-text-main mb-3.5">
                   {title}
                 </h3>
-                <p className="relative font-inter text-[15px] leading-[1.65] text-gray-dark mb-6">
+                <p className="relative font-inter text-[15px] leading-[1.65] text-gray-dark mb-6 flex-1">
                   {body}
                 </p>
 
                 {modal ? (
                   <button
                     onClick={() => setModalOpen(true)}
-                    className="relative font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 bg-transparent p-0 cursor-pointer transition-colors hover:text-green-cta hover:border-green-cta"
+                    className="relative mt-auto font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 bg-transparent p-0 cursor-pointer transition-colors hover:text-green-cta hover:border-green-cta self-start"
                   >
                     {cta}
                   </button>
@@ -212,7 +212,7 @@ export default function ComoAyudar() {
                     href={href}
                     target={external ? '_blank' : undefined}
                     rel={external ? 'noopener noreferrer' : undefined}
-                    className="relative font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 transition-colors hover:text-green-cta hover:border-green-cta"
+                    className="relative mt-auto font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 transition-colors hover:text-green-cta hover:border-green-cta self-start"
                   >
                     {cta}
                   </a>

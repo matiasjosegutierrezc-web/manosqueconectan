@@ -20,7 +20,7 @@ export default function QuoteBanner() {
 
           <Reveal delay={200} className="md:pl-16">
             <p className="font-inter text-[16px] leading-[1.72] text-white/80">
-              Cada persona puede sumar desde sus posibilidades: con tiempo, con cosas o con aportes económicos.
+              Cada persona puede sumar desde sus posibilidades: con tiempo, siendo voluntario, con donaciones materiales o con aportes económicos.
             </p>
           </Reveal>
 

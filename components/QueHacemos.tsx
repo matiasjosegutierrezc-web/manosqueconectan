@@ -11,7 +11,7 @@ interface Activity {
 
 const ACTIVITIES: Activity[] = [
   {
-    freq:   'Domingos',
+    freq:   'Fines de semana',
     title:  'Visitas para jugar',
     desc:   'Tardes de juego y compañía en el hogar. La actividad más regular y la que más impacto genera semana a semana.',
     src:    '/actividad-visitas.jpg',
@@ -34,7 +34,7 @@ const ACTIVITIES: Activity[] = [
   {
     freq:   'Cumpleaños',
     title:  'Festejos',
-    desc:   'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
+    desc:   'Ningún chico festeja solo.',
     src:    '/actividad-cumple.jpg',
     objPos: 'center 85%',
   },
@@ -54,7 +54,7 @@ const ACTIVITIES: Activity[] = [
 
 export default function QueHacemos() {
   return (
-    <section id="que-hacemos" className="bg-[#1F5F6B] py-24" style={{ scrollMarginTop: '70px' }}>
+    <section id="que-hacemos" className="bg-[#1F5F6B] py-24" style={{ scrollMarginTop: '80px' }}>
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
 
         {/* Header */}
