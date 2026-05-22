@@ -5,9 +5,8 @@ interface Activity {
   freq:    string
   title:   string
   desc:    string
-  src?:    string   // undefined = usar PhotoPlaceholder hasta tener la foto
-  objPos?: string   // object-position CSS value
-  imgH?:   string   // Tailwind height class for image container (default h-56)
+  src?:    string
+  objPos?: string
 }
 
 const ACTIVITIES: Activity[] = [
@@ -38,7 +37,6 @@ const ACTIVITIES: Activity[] = [
     desc:   'Celebramos cada cumpleaños como una familia de apoyo. Ningún chico festeja solo.',
     src:    '/actividad-cumple.jpg',
     objPos: 'center 85%',
-    imgH:   'h-64',
   },
   {
     freq:   'Todo el año',
@@ -69,14 +67,14 @@ export default function QueHacemos() {
           </p>
         </Reveal>
 
-        {/* Grid */}
+        {/* Grid — h-full en Reveal + flex-col en card para igualar alturas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {ACTIVITIES.map(({ freq, title, desc, src, objPos, imgH }, i) => (
-            <Reveal key={title} delay={(i % 3) * 100}>
-              <div className="bg-blue-slate/40 border border-white/15 overflow-hidden">
+          {ACTIVITIES.map(({ freq, title, desc, src, objPos }, i) => (
+            <Reveal key={title} delay={(i % 3) * 100} className="h-full">
+              <div className="bg-blue-slate/40 border border-white/15 overflow-hidden h-full flex flex-col">
 
                 {src ? (
-                  <div className={`relative w-full ${imgH ?? 'h-56'} overflow-hidden`}>
+                  <div className="relative w-full h-56 flex-shrink-0 overflow-hidden">
                     <Image
                       src={src}
                       alt={title}
@@ -87,10 +85,10 @@ export default function QueHacemos() {
                     />
                   </div>
                 ) : (
-                  <div className="w-full h-56 bg-white/10" />
+                  <div className="w-full h-56 flex-shrink-0 bg-white/10" />
                 )}
 
-                <div className="p-5 pb-6">
+                <div className="p-5 pb-6 flex-1">
                   <span className="block font-inter text-[10px] font-semibold tracking-[0.15em] uppercase text-green-mint mb-2">
                     {freq}
                   </span>
@@ -101,6 +99,7 @@ export default function QueHacemos() {
                     {desc}
                   </p>
                 </div>
+
               </div>
             </Reveal>
           ))}
