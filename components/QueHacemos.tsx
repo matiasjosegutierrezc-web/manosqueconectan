@@ -25,8 +25,8 @@ const ACTIVITIES: Activity[] = [
     objPos: 'center bottom',
   },
   {
-    freq:   'Salidas',
-    title:  'Recreativas',
+    freq:   'Recreativas',
+    title:  'Salidas',
     desc:   'Temaikén y otros destinos para que los chicos vivan experiencias únicas fuera del hogar.',
     src:    '/actividad-recreativa.jpg',
     objPos: 'center center',
