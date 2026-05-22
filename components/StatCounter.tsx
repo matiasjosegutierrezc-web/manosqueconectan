@@ -4,11 +4,12 @@ import { useEffect, useRef, useState } from 'react'
 
 interface StatCounterProps {
   value: number | '∞'
+  prefix?: string
   suffix?: string
   label: string
 }
 
-export default function StatCounter({ value, suffix = '', label }: StatCounterProps) {
+export default function StatCounter({ value, prefix = '', suffix = '', label }: StatCounterProps) {
   const ref        = useRef<HTMLDivElement>(null)
   const animated   = useRef(false)
   const isInfinity = value === '∞'
@@ -51,7 +52,7 @@ export default function StatCounter({ value, suffix = '', label }: StatCounterPr
   return (
     <div ref={ref} className="flex flex-col gap-1.5">
       <span className="font-lora font-medium text-[56px] leading-none text-text-main">
-        {isInfinity ? '∞' : `${count}${suffix}`}
+        {isInfinity ? '∞' : `${prefix}${count}${suffix}`}
       </span>
       <span className="font-inter text-[10px] font-medium tracking-[0.12em] uppercase text-gray-dark">
         {label}

@@ -49,7 +49,7 @@ export default function Hero() {
               <em>conectan</em>
             </h1>
             <p className="font-inter text-[17px] leading-[1.65] text-white/80 mb-9">
-              Somos el nexo entre personas con ganas de ayudar y chicos que viven en hogares. Organizamos, conectamos y acompañamos.
+              Somos el nexo entre personas con ganas de ayudar y niños y adolescentes que viven en hogares. Organizamos, conectamos y acompañamos siendo voluntario, donando materiales o haciendo un aporte económico.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

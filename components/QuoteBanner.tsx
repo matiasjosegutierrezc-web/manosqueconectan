@@ -2,7 +2,7 @@ import Reveal from '@/components/Reveal'
 
 export default function QuoteBanner() {
   return (
-    <section id="quote" className="pt-24 pb-16 min-h-[200px] flex items-center" style={{ backgroundColor: '#1F5F6B' }}>
+    <section id="quote" className="pt-24 pb-16 min-h-[200px] flex items-center" style={{ backgroundColor: '#6EA0BE' }}>
       <div className="w-full max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] gap-9 md:gap-0 items-center">
 
@@ -20,7 +20,7 @@ export default function QuoteBanner() {
 
           <Reveal delay={200} className="md:pl-16">
             <p className="font-inter text-[16px] leading-[1.72] text-white/80">
-              Conectamos voluntad con impacto real. Cada persona puede sumar desde sus posibilidades: con tiempo, con cosas o con aportes económicos.
+              Cada persona puede sumar desde sus posibilidades: con tiempo, con cosas o con aportes económicos.
             </p>
           </Reveal>
 

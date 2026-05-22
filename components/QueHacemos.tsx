@@ -48,11 +48,16 @@ const ACTIVITIES: Activity[] = [
     src:    '/actividad-donaciones.jpg',
     objPos: 'center center',
   },
+  {
+    freq:   'PROPUESTAS',
+    title:  '¿Se te ocurre algo?',
+    desc:   'Taller, actividad, salida especial. Si tenés ganas y una idea, hay espacio. Hablemos.',
+  },
 ]
 
 export default function QueHacemos() {
   return (
-    <section id="que-hacemos" className="bg-[#1F5F6B] py-24">
+    <section id="que-hacemos" className="bg-[#1F5F6B] py-24" style={{ scrollMarginTop: '70px' }}>
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
 
         {/* Header */}

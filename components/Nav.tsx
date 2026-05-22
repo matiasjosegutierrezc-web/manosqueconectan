@@ -43,7 +43,7 @@ export default function Nav() {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={120} height={44} className="object-contain object-left w-[90px] lg:w-[120px] h-auto" />
+          <Image src="/logo.png" alt="Manos que Conectan" width={150} height={55} className="object-contain object-left w-[110px] lg:w-[150px] h-auto" />
         </a>
 
         {/* Desktop links */}
@@ -64,6 +64,15 @@ export default function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-donation-modal'))}
+              className="inline-flex items-center justify-center px-5 py-2 min-h-[38px] text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-opacity hover:opacity-85"
+              style={{ backgroundColor: '#4DB896' }}
+            >
+              DONÁ
+            </button>
+          </li>
         </ul>
 
         {/* Hamburger — 44×44 tap target */}
@@ -95,6 +104,13 @@ export default function Nav() {
               {label}
             </a>
           ))}
+          <button
+            onClick={() => { closeMenu(); window.dispatchEvent(new Event('open-donation-modal')) }}
+            className="mt-3 inline-flex items-center justify-center px-7 py-3.5 min-h-[44px] text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-opacity hover:opacity-85"
+            style={{ backgroundColor: '#4DB896' }}
+          >
+            DONÁ
+          </button>
         </div>
       )}
     </nav>
