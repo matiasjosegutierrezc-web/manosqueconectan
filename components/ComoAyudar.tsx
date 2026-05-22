@@ -135,8 +135,7 @@ export default function ComoAyudar() {
                 {modal ? (
                   <button
                     onClick={() => setModalOpen(true)}
-                    className="relative font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-white px-5 py-2.5 rounded-none transition-opacity hover:opacity-85"
-                    style={{ backgroundColor: '#4DB896' }}
+                    className="relative font-inter text-[11px] font-semibold tracking-[0.12em] uppercase text-blue-dark border-b border-blue-dark pb-0.5 bg-transparent p-0 cursor-pointer transition-colors hover:text-green-cta hover:border-green-cta"
                   >
                     {cta}
                   </button>

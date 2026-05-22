@@ -10,10 +10,9 @@ interface NavLink {
 }
 
 const LINKS: NavLink[] = [
-  { href: '#quienes-somos',                                                                                              label: 'Quiénes somos' },
-  { href: '#que-hacemos',                                                                                                label: 'Qué hacemos'   },
-  { href: '#como-ayudar',                                                                                                label: 'Cómo ayudar'   },
-  { href: 'https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform',  label: 'Sumate', external: true },
+  { href: '#quienes-somos', label: 'Quiénes somos' },
+  { href: '#que-hacemos',   label: 'Qué hacemos'   },
+  { href: '#como-ayudar',   label: 'Cómo ayudar'   },
 ]
 
 export default function Nav() {
@@ -43,7 +42,7 @@ export default function Nav() {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={150} height={55} className="object-contain object-left w-[110px] lg:w-[150px] h-auto" />
+          <Image src="/logo.png" alt="Manos que Conectan" width={160} height={58} className="object-contain object-left w-[100px] lg:w-[160px] h-auto" />
         </a>
 
         {/* Desktop links */}
@@ -67,8 +66,8 @@ export default function Nav() {
           <li>
             <button
               onClick={() => window.dispatchEvent(new Event('open-donation-modal'))}
-              className="inline-flex items-center justify-center px-5 py-2 min-h-[38px] text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-opacity hover:opacity-85"
-              style={{ backgroundColor: '#4DB896' }}
+              className="inline-flex items-center justify-center px-5 py-2 text-white font-inter text-[12px] font-semibold tracking-[0.05em] uppercase rounded-none bg-[#4DB896] hover:bg-[#3DA882] transition-colors duration-200"
+              style={{ boxShadow: '0 2px 8px rgba(77,184,150,0.35)' }}
             >
               DONÁ
             </button>
@@ -106,8 +105,7 @@ export default function Nav() {
           ))}
           <button
             onClick={() => { closeMenu(); window.dispatchEvent(new Event('open-donation-modal')) }}
-            className="mt-3 inline-flex items-center justify-center px-7 py-3.5 min-h-[44px] text-white font-inter text-[12px] font-semibold tracking-[0.10em] uppercase rounded-none transition-opacity hover:opacity-85"
-            style={{ backgroundColor: '#4DB896' }}
+            className="mt-3 inline-flex items-center justify-center px-7 py-3.5 min-h-[44px] text-white font-inter text-[12px] font-semibold tracking-[0.05em] uppercase rounded-none bg-[#4DB896] hover:bg-[#3DA882] transition-colors duration-200"
           >
             DONÁ
           </button>
