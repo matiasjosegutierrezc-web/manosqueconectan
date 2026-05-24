@@ -42,7 +42,7 @@ export default function Nav() {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={160} height={58} className="object-contain object-left w-[100px] lg:w-[160px] h-auto" />
+          <Image src="/logo.png" alt="Manos que Conectan" width={140} height={50} className="object-contain object-left w-[90px] lg:w-[140px] h-auto" />
         </a>
 
         {/* Desktop links */}

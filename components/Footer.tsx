@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Logo */}
           <a href="#hero" className="inline-flex justify-center md:justify-start">
-            <Image src="/logo.png" alt="Manos que Conectan" width={120} height={44} className="object-contain object-left" />
+            <Image src="/logo.png" alt="Manos que Conectan" width={140} height={50} className="object-contain object-left" />
           </a>
 
           {/* Center */}
