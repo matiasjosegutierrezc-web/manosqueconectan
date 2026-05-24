@@ -37,12 +37,12 @@ export default function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 py-4 flex items-center px-6 lg:px-12"
+      className="fixed top-0 left-0 right-0 z-50 py-2 flex items-center px-6 lg:px-12"
       style={{ backgroundColor: '#6EA0BE' }}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={420} height={100} className="object-contain object-left w-[280px] lg:w-[420px] h-[100px]" />
+          <Image src="/logo.png" alt="Manos que Conectan" width={300} height={90} className="object-contain object-left" style={{ width: '300px', height: 'auto' }} />
         </a>
 
         {/* Desktop links */}
