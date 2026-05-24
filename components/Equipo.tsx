@@ -5,7 +5,7 @@ import StatCounter      from '@/components/StatCounter'
 
 export default function Equipo() {
   return (
-    <section id="equipo" className="bg-cream py-24">
+    <section id="equipo" className="bg-cream pt-24 pb-0">
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20 items-center">
 
