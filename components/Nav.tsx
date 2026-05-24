@@ -42,7 +42,7 @@ export default function Nav() {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="#hero">
-          <Image src="/logo.png" alt="Manos que Conectan" width={300} height={90} className="object-contain object-left" style={{ width: '300px', height: 'auto' }} />
+          <Image src="/logo.png" alt="Manos que Conectan" width={200} height={60} className="object-contain object-left w-[120px] lg:w-[200px] h-auto" />
         </a>
 
         {/* Desktop links */}
