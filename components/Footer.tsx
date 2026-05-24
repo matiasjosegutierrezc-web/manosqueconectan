@@ -3,21 +3,12 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="relative bg-[#6EA0BE] py-12 overflow-hidden">
-      {/* Logo watermark */}
-      <Image
-        src="/logo.png"
-        alt=""
-        width={200}
-        height={200}
-        className="absolute right-8 bottom-0 opacity-[0.08] object-contain pointer-events-none select-none"
-      />
-
-      <div className="relative z-10 max-w-[1200px] mx-auto px-5 lg:px-12">
+<div className="relative z-10 max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-center text-center md:text-left">
 
           {/* Logo */}
           <a href="#hero" className="inline-flex justify-center md:justify-start">
-            <Image src="/logo.png" alt="Manos que Conectan" width={140} height={50} className="object-contain object-left" />
+            <Image src="/logo.png" alt="Manos que Conectan" width={200} height={60} className="w-[150px] lg:w-[220px] h-[50px] lg:h-[65px] object-cover object-center" />
           </a>
 
           {/* Center */}

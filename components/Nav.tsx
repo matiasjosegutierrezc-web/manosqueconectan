@@ -40,7 +40,7 @@ export default function Nav() {
       className="fixed top-0 left-0 right-0 z-50 py-3 flex items-center px-6 lg:px-12"
       style={{ backgroundColor: '#6EA0BE' }}
     >
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto w-full flex items-center justify-between">
         <a href="#hero">
           <Image
             src="/logo.png"
