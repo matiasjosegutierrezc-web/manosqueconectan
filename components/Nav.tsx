@@ -37,7 +37,7 @@ export default function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 py-1 flex items-center px-6 lg:px-12"
+      className="fixed top-0 left-0 right-0 z-50 py-3 flex items-center px-6 lg:px-12"
       style={{ backgroundColor: '#6EA0BE' }}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function Nav() {
             alt="Manos que Conectan"
             width={200}
             height={60}
-            className="w-[120px] lg:w-[200px] h-[40px] lg:h-[50px] object-cover object-center"
+            className="w-[150px] lg:w-[220px] h-[50px] lg:h-[65px] object-cover object-center"
           />
         </a>
 
