@@ -6,7 +6,7 @@ export default function MisionVision() {
       <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
 
         {/* Misión */}
-        <Reveal className="bg-cream py-40 px-12">
+        <Reveal className="bg-cream py-12 lg:py-40 px-12">
           <span className="font-inter text-[11px] font-medium tracking-[0.15em] uppercase text-blue-dark">
             Nuestra Misión
           </span>
@@ -23,7 +23,7 @@ export default function MisionVision() {
         </Reveal>
 
         {/* Visión */}
-        <Reveal delay={200} className="bg-[#3D5A6B] py-40 px-12">
+        <Reveal delay={200} className="bg-[#3D5A6B] py-12 lg:py-40 px-12">
           <span className="font-inter text-[11px] font-medium tracking-[0.15em] uppercase text-green-mint opacity-85">
             Nuestra Visión
           </span>
