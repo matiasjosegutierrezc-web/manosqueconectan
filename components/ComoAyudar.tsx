@@ -1,10 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import Reveal from '@/components/Reveal'
-
-const EASE = [0.25, 0.1, 0.25, 1] as [number, number, number, number]
 
 /* ─── shared primitives ─────────────────────────────────── */
 
@@ -250,48 +247,42 @@ export default function ComoAyudar() {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
           {CARDS.map(({ num, title, body, cta, href, external, modal }, i) => (
-            <motion.div
-              key={num}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
-              whileHover={{ y: -6, boxShadow: '0 16px 36px rgba(42,100,120,0.10)' }}
-              className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white h-full flex flex-col cursor-default"
-            >
-              <span
-                aria-hidden="true"
-                className="pointer-events-none select-none absolute -top-3 right-4 font-lora font-medium text-blue-mid opacity-[0.10] leading-none"
-                style={{ fontSize: '108px' }}
-              >
-                {num}
-              </span>
-
-              <h3 className="relative font-lora font-medium text-[22px] text-text-main mb-3.5">
-                {title}
-              </h3>
-              <p className="relative font-inter text-[15px] leading-[1.65] text-gray-dark mb-6 flex-1">
-                {body}
-              </p>
-
-              {modal ? (
-                <button
-                  onClick={() => modal === 'donation' ? setDonationOpen(true) : setMaterialsOpen(true)}
-                  className={`${CTA_CLASS} bg-transparent p-0 cursor-pointer`}
+            <Reveal key={num} delay={i * 100} className="h-full">
+              <div className="relative overflow-hidden p-9 border border-gray-mid/20 bg-off-white transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(42,100,120,0.09)] h-full flex flex-col">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none select-none absolute -top-3 right-4 font-lora font-medium text-blue-mid opacity-[0.10] leading-none"
+                  style={{ fontSize: '108px' }}
                 >
-                  {cta}
-                </button>
-              ) : (
-                <a
-                  href={href}
-                  target={external ? '_blank' : undefined}
-                  rel={external ? 'noopener noreferrer' : undefined}
-                  className={CTA_CLASS}
-                >
-                  {cta}
-                </a>
-              )}
-            </motion.div>
+                  {num}
+                </span>
+
+                <h3 className="relative font-lora font-medium text-[22px] text-text-main mb-3.5">
+                  {title}
+                </h3>
+                <p className="relative font-inter text-[15px] leading-[1.65] text-gray-dark mb-6 flex-1">
+                  {body}
+                </p>
+
+                {modal ? (
+                  <button
+                    onClick={() => modal === 'donation' ? setDonationOpen(true) : setMaterialsOpen(true)}
+                    className={`${CTA_CLASS} bg-transparent p-0 cursor-pointer`}
+                  >
+                    {cta}
+                  </button>
+                ) : (
+                  <a
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                    className={CTA_CLASS}
+                  >
+                    {cta}
+                  </a>
+                )}
+              </div>
+            </Reveal>
           ))}
         </div>
 

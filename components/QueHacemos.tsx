@@ -1,16 +1,11 @@
-'use client'
-
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-
-const EASE = [0.25, 0.1, 0.25, 1] as [number, number, number, number]
+import Image  from 'next/image'
+import Reveal from '@/components/Reveal'
 
 interface Activity {
   freq:    string
   title:   string
   desc:    string
   src?:    string
-  alt?:    string
   objPos?: string
 }
 
@@ -20,7 +15,6 @@ const ACTIVITIES: Activity[] = [
     title:  'Visitas para jugar',
     desc:   'Compartimos tardes de juegos, charlas y actividades recreativas dentro de los hogares.',
     src:    '/actividad-visitas.jpg',
-    alt:    'Voluntarios compartiendo una tarde de juegos y actividades con niños en un hogar',
     objPos: 'center 85%',
   },
   {
@@ -28,7 +22,6 @@ const ACTIVITIES: Activity[] = [
     title:  'Deportes',
     desc:   'Rugby, fútbol, baile y otras actividades deportivas que promueven valores, vínculos y trabajo en equipo.',
     src:    '/actividad-deportes.jpg',
-    alt:    'Niños y adolescentes practicando deportes como rugby y fútbol en una actividad solidaria',
     objPos: 'center bottom',
   },
   {
@@ -36,7 +29,6 @@ const ACTIVITIES: Activity[] = [
     title:  'Salidas',
     desc:   'Organizamos paseos y actividades recreativas para que los chicos descubran nuevos espacios y vivan experiencias diferentes.',
     src:    '/actividad-recreativa.jpg',
-    alt:    'Niños en una salida recreativa organizada por voluntarios para vivir experiencias fuera del hogar',
     objPos: 'center center',
   },
   {
@@ -44,7 +36,6 @@ const ACTIVITIES: Activity[] = [
     title:  'Cumpleaños',
     desc:   'Porque cada cumpleaños merece ser especial, organizamos festejos, regalos y momentos para compartir.',
     src:    '/actividad-cumple.jpg',
-    alt:    'Festejo de cumpleaños especial organizado para niños que viven en hogares convivenciales',
     objPos: 'center 85%',
   },
   {
@@ -52,7 +43,6 @@ const ACTIVITIES: Activity[] = [
     title:  'Donaciones',
     desc:   'Coordinamos la recepción y entrega de ropa, juguetes, útiles y artículos esenciales según las necesidades de cada hogar.',
     src:    '/actividad-donaciones.jpg',
-    alt:    'Entrega de donaciones de ropa, juguetes y artículos esenciales a niños en un hogar',
     objPos: 'center center',
   },
   {
@@ -68,45 +58,30 @@ export default function QueHacemos() {
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="text-center text-white mb-14"
-        >
+        <Reveal className="text-center text-white mb-14">
           <h2 className="font-lora font-normal leading-[1.15] mb-4" style={{ fontSize: 'clamp(30px, 4.5vw, 48px)' }}>
             Lo que<br /><em>hacemos</em>
           </h2>
-          <p className="font-inter text-[16px] text-white/70 max-w-[600px] mx-auto leading-[1.65]">
+          <p className="font-inter text-[16px] text-white/70 max-w-[520px] mx-auto leading-[1.65]">
             Generamos espacios de encuentro, acompañamiento y diversión para niños y adolescentes que viven en hogares. Organizamos actividades, salidas, festejos y donaciones que responden a las necesidades reales de cada lugar.
           </p>
-        </motion.div>
+        </Reveal>
 
-        {/* Grid con stagger */}
+        {/* Grid — h-full en Reveal + flex-col en card para igualar alturas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {ACTIVITIES.map(({ freq, title, desc, src, alt, objPos }, i) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.55, delay: (i % 3) * 0.1, ease: EASE }}
-              whileHover={{ y: -5 }}
-              className="h-full"
-            >
+          {ACTIVITIES.map(({ freq, title, desc, src, objPos }, i) => (
+            <Reveal key={title} delay={(i % 3) * 100} className="h-full">
               <div className="bg-blue-slate/40 border border-white/15 overflow-hidden h-full flex flex-col">
 
                 {src ? (
                   <div className="relative w-full h-56 flex-shrink-0 overflow-hidden">
                     <Image
                       src={src}
-                      alt={alt ?? title}
+                      alt={title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover"
                       style={{ objectPosition: objPos ?? 'center center' }}
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      loading="lazy"
                     />
                   </div>
                 ) : (
@@ -126,7 +101,7 @@ export default function QueHacemos() {
                 </div>
 
               </div>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
 
