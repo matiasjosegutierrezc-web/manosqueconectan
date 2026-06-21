@@ -1,7 +1,18 @@
+'use client'
+
 import Image           from 'next/image'
-import Reveal          from '@/components/Reveal'
+import { motion }      from 'framer-motion'
 import PhotoPlaceholder from '@/components/PhotoPlaceholder'
 import StatCounter      from '@/components/StatCounter'
+
+const EASE = [0.25, 0.1, 0.25, 1] as [number, number, number, number]
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-40px' },
+  transition: { duration: 0.6, delay, ease: EASE },
+})
 
 export default function Equipo() {
   return (
@@ -9,38 +20,59 @@ export default function Equipo() {
       <div className="max-w-[1200px] mx-auto px-5 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-          {/* Left: photo collage */}
-          <Reveal>
+          {/* Left: photo collage con stagger */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-40px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
+          >
             <div className="grid grid-cols-2 gap-3">
-              {/* Reemplazar con <Image src="..." alt="Equipo Manos que Conectan" fill className="object-cover" /> */}
-              <PhotoPlaceholder
-                label="Foto principal equipo"
-                aspect="16/9"
+              <motion.div
+                variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
                 className="col-span-2"
-              />
-              <div className="relative w-full min-h-[180px] overflow-hidden">
+              >
+                <PhotoPlaceholder
+                  label="Foto principal equipo"
+                  aspect="16/9"
+                />
+              </motion.div>
+              <motion.div
+                variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.55 } } }}
+                className="relative w-full min-h-[180px] overflow-hidden"
+              >
                 <Image
                   src="/foto-equipo-chica.jpg"
-                  alt="Equipo Manos que Conectan"
+                  alt="Integrantes del equipo de voluntarios de Manos que Conectan"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 25vw"
+                  loading="lazy"
                 />
-              </div>
-              <div className="relative w-full min-h-[180px] overflow-hidden">
+              </motion.div>
+              <motion.div
+                variants={{ hidden: { opacity: 0, x: 20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.55 } } }}
+                className="relative w-full min-h-[180px] overflow-hidden"
+              >
                 <Image
                   src="/foto-equipo-chica2.jpg"
-                  alt="Equipo en actividad"
+                  alt="Voluntarios de Manos que Conectan en una actividad con niños"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 25vw"
+                  loading="lazy"
                 />
-              </div>
+              </motion.div>
             </div>
-          </Reveal>
+          </motion.div>
 
-          {/* Right: text */}
-          <Reveal delay={200}>
+          {/* Right: texto slide desde la derecha */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+          >
             <span className="block font-inter text-[11px] font-medium tracking-[0.15em] uppercase text-blue-dark mb-3.5">
               El equipo
             </span>
@@ -51,15 +83,15 @@ export default function Equipo() {
               Conectamos voluntad<br />
               con <em className="text-blue-mid">impacto real</em>
             </h2>
-            <p className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
+            <motion.p {...fadeUp(0.2)} className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
               Somos un equipo de voluntarios comprometidos con conectar a las personas con oportunidades concretas para ayudar.
-            </p>
-            <p className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
+            </motion.p>
+            <motion.p {...fadeUp(0.28)} className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
               Trabajamos junto a hogares y organizaciones para identificar necesidades, coordinar actividades y acompañar cada iniciativa de principio a fin.
-            </p>
-            <p className="font-inter text-[16px] leading-[1.72] text-gray-dark">
+            </motion.p>
+            <motion.p {...fadeUp(0.36)} className="font-inter text-[16px] leading-[1.72] text-gray-dark">
               Creemos que la solidaridad genera más impacto cuando existe una red que organiza, conecta y facilita que la ayuda llegue donde realmente hace falta.
-            </p>
+            </motion.p>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-0 mt-8 mb-2 border-t border-gray-mid/22 border-b border-gray-mid/22 py-7">
@@ -75,7 +107,7 @@ export default function Equipo() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mt-7">
+            <motion.div {...fadeUp(0.44)} className="flex flex-wrap gap-3 mt-7">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdY4OFAwCyP9FmRJ4oH8pfTW-OclGIy2IyLcUy-NL0ytmXkTQ/viewform"
                 target="_blank"
@@ -92,9 +124,9 @@ export default function Equipo() {
               >
                 Instagram
               </a>
-            </div>
+            </motion.div>
 
-          </Reveal>
+          </motion.div>
 
         </div>
       </div>

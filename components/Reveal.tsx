@@ -1,7 +1,7 @@
 'use client'
 
 import { type ReactNode } from 'react'
-import { useScrollReveal } from '@/hooks/useScrollReveal'
+import { motion } from 'framer-motion'
 
 interface RevealProps {
   children: ReactNode
@@ -10,17 +10,15 @@ interface RevealProps {
 }
 
 export default function Reveal({ children, className = '', delay = 0 }: RevealProps) {
-  const { ref, visible } = useScrollReveal()
-
   return (
-    <div
-      ref={ref}
-      style={delay > 0 ? { transitionDelay: `${delay}ms` } : undefined}
-      className={`transition-all duration-500 ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-      } ${className}`}
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.6, delay: delay / 1000, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
