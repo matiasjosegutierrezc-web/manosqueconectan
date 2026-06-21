@@ -49,7 +49,7 @@ export default function Hero() {
               <em>conectan</em>
             </h1>
             <p className="font-inter text-[17px] leading-[1.65] text-white/80 mb-9">
-              Somos el nexo entre personas con ganas de ayudar y niños y adolescentes que viven en hogares. Organizamos, conectamos y acompañamos siendo voluntario, donando materiales o haciendo un aporte económico.
+              Somos el puente entre personas con ganas de ayudar y niños y adolescentes que viven en hogares. Trabajamos junto a los hogares para transformar esa voluntad en acciones concretas: acompañando actividades, gestionando donaciones y generando oportunidades para que más chicos puedan disfrutar de experiencias, compañía y nuevas oportunidades.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

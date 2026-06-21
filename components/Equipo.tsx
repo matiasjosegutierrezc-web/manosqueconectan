@@ -52,10 +52,13 @@ export default function Equipo() {
               con <em className="text-blue-mid">impacto real</em>
             </h2>
             <p className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
-              Somos un grupo de voluntarios que cree que cada persona tiene algo valioso para dar. No hace falta experiencia previa, solo las ganas de estar presente y acompañar.
+              Somos un equipo de voluntarios comprometidos con conectar a las personas con oportunidades concretas para ayudar.
+            </p>
+            <p className="font-inter text-[16px] leading-[1.72] text-gray-dark mb-4">
+              Trabajamos junto a hogares y organizaciones para identificar necesidades, coordinar actividades y acompañar cada iniciativa de principio a fin.
             </p>
             <p className="font-inter text-[16px] leading-[1.72] text-gray-dark">
-              Trabajamos en red con los hogares, coordinamos con sus equipos y nos aseguramos de que cada visita, donación y actividad llegue donde más se necesita.
+              Creemos que la solidaridad genera más impacto cuando existe una red que organiza, conecta y facilita que la ayuda llegue donde realmente hace falta.
             </p>
 
             {/* Stats */}

@@ -13,42 +13,42 @@ const ACTIVITIES: Activity[] = [
   {
     freq:   'Fines de semana',
     title:  'Visitas para jugar',
-    desc:   'Tardes de juego y compañía en los hogares.',
+    desc:   'Compartimos tardes de juegos, charlas y actividades recreativas dentro de los hogares.',
     src:    '/actividad-visitas.jpg',
     objPos: 'center 85%',
   },
   {
     freq:   'Sábados',
     title:  'Deportes',
-    desc:   'Rugby, Fútbol, baile y más. El deporte como herramienta de contención y trabajo en equipo.',
+    desc:   'Rugby, fútbol, baile y otras actividades deportivas que promueven valores, vínculos y trabajo en equipo.',
     src:    '/actividad-deportes.jpg',
     objPos: 'center bottom',
   },
   {
     freq:   '',
     title:  'Salidas',
-    desc:   'Recreativas para que los chicos vivan experiencias únicas fuera del hogar.',
+    desc:   'Organizamos paseos y actividades recreativas para que los chicos descubran nuevos espacios y vivan experiencias diferentes.',
     src:    '/actividad-recreativa.jpg',
     objPos: 'center center',
   },
   {
     freq:   'Festejos',
     title:  'Cumpleaños',
-    desc:   'Celebramos cada cumpleaños.',
+    desc:   'Porque cada cumpleaños merece ser especial, organizamos festejos, regalos y momentos para compartir.',
     src:    '/actividad-cumple.jpg',
     objPos: 'center 85%',
   },
   {
     freq:   'Todo el año',
     title:  'Donaciones',
-    desc:   'Coordinamos la recepción y entrega de ropa, juguetes y artículos esenciales según las necesidades de cada hogar.',
+    desc:   'Coordinamos la recepción y entrega de ropa, juguetes, útiles y artículos esenciales según las necesidades de cada hogar.',
     src:    '/actividad-donaciones.jpg',
     objPos: 'center center',
   },
   {
     freq:   'PROPUESTAS',
-    title:  '¿Se te ocurre algo?',
-    desc:   'Taller, actividad, salida especial. Si tenés ganas y una idea, hay espacio. Hablemos.',
+    title:  '¿Tenés una idea?',
+    desc:   '¿Tenés una idea para compartir? Un taller, una actividad, una salida especial o cualquier propuesta que pueda sumar. Siempre estamos abiertos a nuevas formas de acompañar.',
   },
 ]
 
@@ -63,7 +63,7 @@ export default function QueHacemos() {
             Lo que<br /><em>hacemos</em>
           </h2>
           <p className="font-inter text-[16px] text-white/70 max-w-[520px] mx-auto leading-[1.65]">
-            Llenamos los fines de semana de los chicos de actividades, compañía y contención.
+            Generamos espacios de encuentro, acompañamiento y diversión para niños y adolescentes que viven en hogares. Organizamos actividades, salidas, festejos y donaciones que responden a las necesidades reales de cada lugar.
           </p>
         </Reveal>
 

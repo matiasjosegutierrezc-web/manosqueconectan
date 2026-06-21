@@ -239,7 +239,7 @@ export default function ComoAyudar() {
           </Reveal>
           <Reveal delay={100} className="md:text-right">
             <p className="font-inter text-[16px] leading-[1.7] text-gray-dark">
-              No hace falta mucho. Cada gesto cuenta. Elegí la forma que mejor se adapte a tus posibilidades.
+              No todos pueden ayudar de la misma manera. Por eso ofrecemos distintas formas de colaborar. Elegí la que mejor se adapte a tus posibilidades.
             </p>
           </Reveal>
         </div>

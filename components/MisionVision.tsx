@@ -15,10 +15,10 @@ export default function MisionVision() {
             className="font-lora font-normal text-text-main leading-[1.3] mb-5"
             style={{ fontSize: 'clamp(24px, 2.8vw, 34px)' }}
           >
-            Acompañamos a niños que viven en hogares. Somos el puente hacia quienes quieren ayudar.
+            Acompañamos a niños que viven en hogares. Acercamos a quienes quieren ayudar.
           </h2>
           <p className="font-inter text-[16px] leading-[1.7] text-gray-dark">
-            Acompañamos a niños que se encuentran en hogares. Buscamos conectar a personas que quieren ayudar con las necesidades reales de cada lugar. Organizamos visitas para jugar, salidas recreativas, actividades deportivas y festejos de cumpleaños.
+            Conectamos a personas con ganas de involucrarse con las necesidades reales de los hogares y de los chicos que viven en ellos. Organizamos visitas, actividades recreativas, propuestas deportivas y festejos de cumpleaños que generan momentos de compañía, integración y alegría.
           </p>
         </Reveal>
 
@@ -32,10 +32,10 @@ export default function MisionVision() {
             className="font-lora font-normal text-white leading-[1.3] mb-5"
             style={{ fontSize: 'clamp(24px, 2.8vw, 34px)' }}
           >
-            <em>Ser el nexo transparente entre la intención solidaria y el impacto real.</em>
+            <em>Que ayudar sea simple y accesible para todos.</em>
           </h2>
           <p className="font-inter text-[16px] leading-[1.7] text-white/80">
-            Ser el nexo entre las personas que tienen ganas de ayudar y las organizaciones que necesitan ayuda. Soñamos con expandir nuestra red para que cualquier persona encuentre un canal transparente, ágil y directo donde transformar su intención solidaria en un impacto real.
+            Soñamos con una comunidad donde nadie se quede con las ganas de ayudar y donde cada hogar pueda encontrar el acompañamiento que necesita. Queremos construir una red cada vez más amplia de personas comprometidas, transformando la solidaridad en vínculos reales y oportunidades para más chicos.
           </p>
         </Reveal>
 
